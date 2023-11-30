@@ -1,5 +1,6 @@
 body {
   padding: 0;
+  margin: 0;
   text-align: center;
 }
 
@@ -22,7 +23,7 @@ body {
   position: relative;
   background-image: url(../images/road.png);
   background-size: cover;
-  animation: slide 5s linear infinite;
+  animation: slide 4s linear infinite;
 }
 
 @keyframes slide {
