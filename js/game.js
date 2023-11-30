@@ -4,7 +4,7 @@ class Game {
         this.gameScreen = document.getElementById('game-screen')
         this.height = 800
         this.width = 540
-        //this.player
+        this.player = null
     }
 
     start() {
@@ -14,5 +14,14 @@ class Game {
         this.gameScreen.style.width = `${this.width}px`
 
         this.player = new Player(this.gameScreen)
+        this.gameLoop()
+    }
+
+    gameLoop() {
+        this.player.move()
+
+        requestAnimationFrame(() => {
+            this.gameLoop()
+        })
     }
 }

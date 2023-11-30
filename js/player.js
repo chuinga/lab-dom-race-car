@@ -17,4 +17,11 @@ class Player{
         
         this.gameScreen.appendChild(this.element)
     }
+    move() { 
+        this.left += 1
+        requestAnimationFrame(this.move)
+
+        this.element.style.left = `${this.left}px`
+        this.element.style.top = `${this.top}px`
+    }
 }
